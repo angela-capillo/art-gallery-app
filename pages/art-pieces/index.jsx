@@ -19,16 +19,17 @@ export default function Gallery() {
 
   //console.log("bla", artPieces);
 
-
   return (
     <>
       <h1>Gallery</h1>
       <ul>
-        <li>
-          <Image />
-          <button></button>
-          <p></p>
-        </li>
+        {artPieces && artPieces.map(({slug, name, artist, imageSource}) => (
+            <li key={slug}>
+            <Image src={imageSource} height={200} width={300}/>
+            <button></button>
+            <p>{name + " by " + artist}</p>
+          </li>
+        ))}
       </ul>
     </>
   );
