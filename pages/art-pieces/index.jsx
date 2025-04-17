@@ -2,12 +2,13 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ArtPiecesList from "@/components/ArtPieceList";
+import PageWrapper from "@/components/PageWrapper";
 
-const PageWrapper = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`;
+// const PageWrapper = styled.div` // moved this to a component so I can use it for other pages too
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// `;
 
 export default function Gallery({ artPieces }) {
   //const [artPieces, setArtPieces] = useState(""); // out big time state variable; lifted to app to serve other pages
