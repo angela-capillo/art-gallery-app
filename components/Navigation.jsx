@@ -1,7 +1,11 @@
 import Link from "next/link";
 import styled from "styled-components";
 
+
 const NavigationWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 60px;
   padding: 8px;
@@ -9,6 +13,7 @@ const NavigationWrapper = styled.div`
   gap: 8px;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #bbb;
+  z-index: 10;
 `;
 
 const NavigationLink = styled(Link)`
@@ -17,6 +22,20 @@ const NavigationLink = styled(Link)`
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: block;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #333;
+  }
 `;
 
 export default function Navigation() {
