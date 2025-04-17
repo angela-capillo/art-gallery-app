@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
 
-  const [artPieces, setArtPieces] = useState(""); // out big time state variable; lifted to app to serve other pages
+  const [artPieces, setArtPieces] = useState([]); // out big time state variable; lifted to app to serve other pages; had to change it into an array because guess what, I had some issues :D
 
   useEffect(() => { // lifted to app to serve other pages
     // moving the function inside the useEffect so it can fetch the data after render
