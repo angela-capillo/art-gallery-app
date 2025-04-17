@@ -1,6 +1,6 @@
 import { ArtPieceImage } from "./StyledComponents";
 
-export default function ArtPieceDetail({ slug, name, artist, image, year }) {
+export default function ArtPieceDetail({ name, artist, image, year }) {
   return (
     <div>
       <ArtPieceImage
