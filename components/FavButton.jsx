@@ -8,7 +8,7 @@ export default function FavButton({ slug, favorites, onToggleFavorite }) {
 
 
     return (
-        <StyledButton type="button" aria-label="Favorite" onClick={() => onToggleFavorite(slug)}>
+        <StyledButton type="button" aria-label="Favorite" onClick={() => {onToggleFavorite(slug)}}>
             <Image src={isFavorite ? "/assets/fav_filled.svg" : "/assets/fav_empty.svg"}
             width={24}
             height={24}

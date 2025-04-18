@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const ArtPieceWrapper = styled.li`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +21,6 @@ export const ArtPieceWrapper = styled.li`
 `;
 
 export const ArtPieceLink = styled(Link)`
-  position: relative;
   text-decoration: none;
   color: #000;
 `;
@@ -83,10 +83,16 @@ export const NavigationLink = styled(Link)`
 
 export const StyledButton = styled.button`
   position: absolute;
-  right: 10px;
-  top: 10px;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
+  right: 2px;
+  top: 2px;
+  border-radius: 8px;
+  padding: 8px 8px 5px 8px;
+  margin: 8px;
+  background-color: #fafafa;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+  background-color: #ffeeee;
+  }
   `;
