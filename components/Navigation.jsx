@@ -19,7 +19,7 @@ export default function Navigation() {
       <NavigationLink href="#">Favorites</NavigationLink> */}
       {links.map((link) => {
         const isCurrentPage = currentPage === link.href; // true when it matches
-        console.log(currentPage);
+        //console.log(currentPage);
 
         return (
           <NavigationLink

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 export default function SpotlightArtPiece({ artPieces }) {
   const [randomArtPiece, setRandomArtPiece] = useState(null);
 
-  console.log("outside use effect", randomArtPiece);
+  //console.log("outside use effect", randomArtPiece);
 
   function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
@@ -13,7 +13,7 @@ export default function SpotlightArtPiece({ artPieces }) {
   useEffect(() => {
     setRandomArtPiece(getRandomElement(artPieces));
 
-    console.log("inside use effect", randomArtPiece);
+    //console.log("inside use effect", randomArtPiece);
     
   }, [artPieces])
 

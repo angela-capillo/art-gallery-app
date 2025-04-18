@@ -9,7 +9,7 @@ const ArtPieceList = styled.ul`
   max-width: 360px;
 `;
 
-export default function ArtPiecesList({ artPieces }) {
+export default function ArtPiecesList({ artPieces, favorites, onToggleFavorite }) {
   return (
     <ArtPieceList>
       {artPieces && // we check if artPieces exists (aka if it is true) and if yes we do a map loop through the array to show the art pieces
@@ -20,6 +20,8 @@ export default function ArtPiecesList({ artPieces }) {
             name={name}
             artist={artist}
             image={imageSource}
+            favorites={favorites}
+            onToggleFavorite={onToggleFavorite}
           ></ArtPiece>
         ))}
     </ArtPieceList>

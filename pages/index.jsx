@@ -19,7 +19,7 @@ export default function HomePage({ artPieces }) {
   return (
     <PageWrapper>
       <h1>Spotlight</h1>
-      <SpotlightArtPiece artPieces={artPieces} />
+      <SpotlightArtPiece artPieces={artPieces}/>
       {/* <ArtPiece slug={randomArtPiece.slug} // also this moving it in the spotlight compo
       name={randomArtPiece.name}
       artist={randomArtPiece.artist}
