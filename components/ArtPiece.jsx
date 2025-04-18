@@ -1,4 +1,5 @@
 import { ArtPieceImage, ArtPieceLabel, ArtPieceLink, ArtPieceWrapper } from "./StyledComponents";
+import FavButton from "./FavButton";
 
 export default function ArtPiece({ slug, name, artist, image }) {
   return (
@@ -10,7 +11,7 @@ export default function ArtPiece({ slug, name, artist, image }) {
           width={300}
           alt={name + " by " + image}
         />
-        <button></button>
+        <FavButton />
         <ArtPieceLabel>{`"${name}" by ${artist}`}</ArtPieceLabel>
       </ArtPieceLink>
     </ArtPieceWrapper>

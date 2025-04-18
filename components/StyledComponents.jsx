@@ -20,6 +20,7 @@ export const ArtPieceWrapper = styled.li`
 `;
 
 export const ArtPieceLink = styled(Link)`
+  position: relative;
   text-decoration: none;
   color: #000;
 `;
@@ -79,3 +80,13 @@ export const NavigationLink = styled(Link)`
     pointer-events: none;
   `}
 `;
+
+export const StyledButton = styled.button`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  `;
