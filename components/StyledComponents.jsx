@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const ArtPieceWrapper = styled.li`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,4 +79,31 @@ export const NavigationLink = styled(Link)`
     background-color: #ccc;
     pointer-events: none;
   `}
+`;
+
+export const StyledButton = styled.button`
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  border-radius: 8px;
+  padding: 8px 8px 5px 8px;
+  margin: 8px;
+  background-color: #fafafa;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+  background-color: #ffeeee;
+  }
+  `;
+
+export const ArtPieceDetailWrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #000;
 `;

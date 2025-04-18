@@ -1,18 +1,28 @@
-import { ArtPieceImage } from "./StyledComponents";
+import { ArtPieceImage, ArtPieceDetailWrapper } from "./StyledComponents";
+import PageWrapper from "./PageWrapper";
+import FavButton from "./FavButton";
 
-export default function ArtPieceDetail({ name, artist, image, year, genre }) {
+export default function ArtPieceDetail({ name, artist, image, year, genre, slug, favorites,
+  onToggleFavorite }) {
   return (
-    <div>
-      <ArtPieceImage
-        src={image}
-        height={200}
-        width={300}
-        alt={name + " by " + image}
-      />
-      <h1>{name}</h1>
-      <p>{artist}</p>
-      <p>{genre}</p>
-      <p>{year}</p>
-    </div>
+    <PageWrapper>
+      <ArtPieceDetailWrapper>
+        <ArtPieceImage
+          src={image}
+          height={200}
+          width={300}
+          alt={name + " by " + image}
+        />
+        <FavButton
+          slug={slug}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+        />
+        <h1>{name}</h1>
+        <p>{artist}</p>
+        <p>{genre}</p>
+        <p>{year}</p>
+      </ArtPieceDetailWrapper>
+    </PageWrapper>
   );
 }
