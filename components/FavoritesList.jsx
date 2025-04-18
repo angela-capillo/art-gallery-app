@@ -1,11 +1,13 @@
 import ArtPiece from "./ArtPiece";
 import { ArtPieceList } from "./StyledComponents";
 
-export default function FavoritesList({ favorites, onToggleFavorite }) {
+export default function FavoritesList({ artPieces, favorites, onToggleFavorite }) {
+    console.log(favorites)
   return (
     <ArtPieceList>
-      {favorites && // we check if artPieces exists (aka if it is true) and if yes we do a map loop through the array to show the art pieces
-        favorites.map(({ slug, name, artist, imageSource }) => (
+      {artPieces && // we check if artPieces exists (aka if it is true) and if yes we do a map loop through the array to show the art pieces
+        artPieces.filter(({ slug }) => favorites.includes(slug))
+        .map(({ slug, name, artist, imageSource }) => (
           <ArtPiece
             key={slug}
             slug={slug}
