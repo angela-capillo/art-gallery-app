@@ -1,5 +1,5 @@
-import FavoritesList from "@/components/FavoritesList";
 import PageWrapper from "@/components/PageWrapper";
+import ArtPiecesList from "@/components/ArtPieceList";
 
 export default function Favorites({ artPieces, favorites, onToggleFavorite }) {
   if (!favorites || favorites.length === 0) {
@@ -14,10 +14,11 @@ export default function Favorites({ artPieces, favorites, onToggleFavorite }) {
   return (
     <PageWrapper>
       <h1>Favorites</h1>
-      <FavoritesList
+      <ArtPiecesList
         artPieces={artPieces}
         favorites={favorites}
         onToggleFavorite={onToggleFavorite}
+        onlyFavs={true}
       />
     </PageWrapper>
   );
