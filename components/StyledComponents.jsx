@@ -107,3 +107,11 @@ export const ArtPieceDetailWrapper = styled.div`
   padding: 10px;
   border: 1px solid #000;
 `;
+
+export const ArtPieceList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 16px;
+  max-width: 360px;
+`;

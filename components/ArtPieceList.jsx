@@ -1,29 +1,39 @@
 import ArtPiece from "./ArtPiece";
-import styled from "styled-components";
+import { ArtPieceList } from "./StyledComponents";
 
-const ArtPieceList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  gap: 16px;
-  max-width: 360px;
-`;
+export default function ArtPiecesList({ artPieces, favorites, onToggleFavorite, onlyFavs = false }) {
 
-export default function ArtPiecesList({ artPieces, favorites, onToggleFavorite }) {
+  const filteredArtPieces = onlyFavs // we actually put the filter logic for the favorite list component in a variable here so we use it later in the map
+  ? artPieces.filter(({ slug }) => favorites.includes(slug))
+  : artPieces;
+
   return (
+    // <ArtPieceList>
+    //   {artPieces && // we check if artPieces exists (aka if it is true) and if yes we do a map loop through the array to show the art pieces
+    //     artPieces.map(({ slug, name, artist, imageSource }) => (
+    //       <ArtPiece
+    //         key={slug}
+    //         slug={slug}
+    //         name={name}
+    //         artist={artist}
+    //         image={imageSource}
+    //         favorites={favorites}
+    //         onToggleFavorite={onToggleFavorite}
+    //       ></ArtPiece>
+    //     ))}
+    // </ArtPieceList>
     <ArtPieceList>
-      {artPieces && // we check if artPieces exists (aka if it is true) and if yes we do a map loop through the array to show the art pieces
-        artPieces.map(({ slug, name, artist, imageSource }) => (
-          <ArtPiece
-            key={slug}
-            slug={slug}
-            name={name}
-            artist={artist}
-            image={imageSource}
-            favorites={favorites}
-            onToggleFavorite={onToggleFavorite}
-          ></ArtPiece>
-        ))}
+      {filteredArtPieces.map(({ slug, name, artist, imageSource }) => (
+        <ArtPiece
+          key={slug}
+          slug={slug}
+          name={name}
+          artist={artist}
+          image={imageSource}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+        />
+      ))}
     </ArtPieceList>
   );
 }

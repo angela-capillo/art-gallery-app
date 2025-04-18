@@ -8,7 +8,7 @@ export default function Navigation() {
   const links = [
     { href: "/", label: "Spotlight" },
     { href: "/art-pieces", label: "Gallery" },
-    { href: "#", label: "Favorites" },
+    { href: "/favorites", label: "Favorites" },
   ];
   const currentPage = router.pathname;
 
