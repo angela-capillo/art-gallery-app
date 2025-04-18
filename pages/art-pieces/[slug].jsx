@@ -1,5 +1,5 @@
 import PageWrapper from "@/components/PageWrapper";
-import { ArtPieceLink } from "@/components/StyledComponents";
+import { ArtPieceLink, NavigationLink } from "@/components/StyledComponents";
 import ArtPieceDetail from "@/components/ArtPieceDetail";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -21,13 +21,14 @@ export default function DetailsPage({ artPieces }) {
 		    <title>{currentArtPiece.name}</title>
 	    </Head>
         <PageWrapper>
-         <ArtPieceLink href="/art-pieces">Back to art pieces</ArtPieceLink>
          <ArtPieceDetail
             name={currentArtPiece.name}
             artist={currentArtPiece.artist}
             image={currentArtPiece.imageSource}
             year={currentArtPiece.year}
+            genre={currentArtPiece.genre}
             />
+            <NavigationLink href="/art-pieces">Back to art pieces</NavigationLink>
         </PageWrapper>
         </>
     )
