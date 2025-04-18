@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import styled from "styled-components";
 import ArtPiecesList from "@/components/ArtPieceList";
 import PageWrapper from "@/components/PageWrapper";
 

@@ -96,3 +96,14 @@ export const StyledButton = styled.button`
   background-color: #ffeeee;
   }
   `;
+
+export const ArtPieceDetailWrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #000;
+`;
