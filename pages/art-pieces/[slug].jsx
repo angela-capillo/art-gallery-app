@@ -20,6 +20,7 @@ console.log("arr", artPieces);
   const currentArtPiece = artPieces.find((artPiece) => artPiece.slug === slug);
 
   //console.log("curr", slug);
+  //console.log("colors", currentArtPiece.colors);
 
   if (!currentArtPiece) {
     return null;
@@ -40,6 +41,7 @@ console.log("arr", artPieces);
           slug={currentArtPiece.slug}
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
+          colors={currentArtPiece.colors}
         />
         <NavigationLink href="/art-pieces">Back to art pieces</NavigationLink>
       </PageWrapper>

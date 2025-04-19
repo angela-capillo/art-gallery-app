@@ -1,9 +1,12 @@
 import { ArtPieceImage, ArtPieceDetailWrapper } from "./StyledComponents";
 import PageWrapper from "./PageWrapper";
 import FavButton from "./FavButton";
+import Palette from "./Palette";
 
 export default function ArtPieceDetail({ name, artist, image, year, genre, slug, favorites,
-  onToggleFavorite }) {
+  onToggleFavorite, colors }) {
+
+  //console.log("col", colors);  
   return (
     <PageWrapper>
       <ArtPieceDetailWrapper>
@@ -18,6 +21,7 @@ export default function ArtPieceDetail({ name, artist, image, year, genre, slug,
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
         />
+        <Palette colors={colors}/>
         <h1>{name}</h1>
         <p>{artist}</p>
         <p>{genre}</p>
