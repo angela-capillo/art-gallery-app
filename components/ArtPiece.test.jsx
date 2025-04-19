@@ -72,10 +72,10 @@ test("calls onToggleFavorite prop function when FavButton is clicked", async () 
 
   render(
     <ArtPiece
-      slug="blue-mountain"
-      name="Blue Mountain"
-      artist="Alice Smith"
-      image="https://example.com/image.jpg"
+      slug={artPieceTestData.slug}
+      name={artPieceTestData.name}
+      artist={artPieceTestData.artist}
+      image={artPieceTestData.imageSource}
       favorites={[]}
       onToggleFavorite={testToggleFavorite}
     />
