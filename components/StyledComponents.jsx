@@ -28,7 +28,9 @@ export const ArtPieceLink = styled(Link)`
 export const ArtPieceImage = styled(Image)`
   width: 300px;
   height: 200px;
+  border-radius: 8px;
   object-fit: contain;
+
 `;
 
 export const ArtPieceLabel = styled.p`
@@ -39,9 +41,9 @@ export const ArtPieceLabel = styled.p`
 
 export const NavigationWrapper = styled.div`
   position: fixed;
+  justify-content: center;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  width: 420px;
   height: 60px;
   padding: 8px;
   display: grid;
@@ -83,8 +85,8 @@ export const NavigationLink = styled(Link)`
 
 export const StyledButton = styled.button`
   position: absolute;
-  right: 2px;
-  top: 2px;
+  right: 4px;
+  top: 4px;
   border-radius: 8px;
   padding: 8px 8px 5px 8px;
   margin: 8px;
@@ -102,16 +104,15 @@ export const ArtPieceDetailWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style-type: none;
-  border-radius: 8px;
+  margin-top: 32px;
   padding: 10px;
-  border: 1px solid #000;
 `;
 
 export const ArtPieceList = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0;
   gap: 16px;
   max-width: 360px;
 `;
