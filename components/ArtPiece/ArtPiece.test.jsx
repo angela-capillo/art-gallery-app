@@ -1,12 +1,3 @@
-// what do we want to test here:
-
-// slug,
-// name,
-// artist,
-// image,  <-- all these should be rendered properly
-// link to detail page should also give the correct href
-// onToggleFavorite, <-- this function is called when the button is clicked
-
 import ArtPiece from "./ArtPiece";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";

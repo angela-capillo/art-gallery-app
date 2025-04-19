@@ -1,5 +1,5 @@
-import PageWrapper from "@/components/PageWrapper";
-import ArtPiecesList from "@/components/ArtPieceList";
+import PageWrapper from "@/components/PageWrapper/PageWrapper";
+import ArtPiecesList from "@/components/ArtPieceList/ArtPieceList";
 
 export default function Favorites({ artPieces, favorites, onToggleFavorite }) {
   if (!favorites || favorites.length === 0) {

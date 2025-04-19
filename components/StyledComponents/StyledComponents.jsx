@@ -28,6 +28,7 @@ export const ArtPieceLink = styled(Link)`
 export const ArtPieceImage = styled(Image)`
   width: 300px;
   height: 200px;
+  border-radius: 8px;
   object-fit: contain;
 `;
 
@@ -39,9 +40,9 @@ export const ArtPieceLabel = styled.p`
 
 export const NavigationWrapper = styled.div`
   position: fixed;
+  justify-content: center;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  width: 420px;
   height: 60px;
   padding: 8px;
   display: grid;
@@ -74,7 +75,8 @@ export const NavigationLink = styled(Link)`
   }
 
   ${({ isDisabled }) =>
-    isDisabled &&`
+    isDisabled &&
+    `
     color: #777;
     background-color: #ccc;
     pointer-events: none;
@@ -83,8 +85,8 @@ export const NavigationLink = styled(Link)`
 
 export const StyledButton = styled.button`
   position: absolute;
-  right: 2px;
-  top: 2px;
+  right: 4px;
+  top: 4px;
   border-radius: 8px;
   padding: 8px 8px 5px 8px;
   margin: 8px;
@@ -93,25 +95,84 @@ export const StyledButton = styled.button`
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-  background-color: #ffeeee;
+    background-color: #ffeeee;
   }
-  `;
+`;
 
 export const ArtPieceDetailWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style-type: none;
-  border-radius: 8px;
+  margin-top: 32px;
   padding: 10px;
-  border: 1px solid #000;
 `;
 
 export const ArtPieceList = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0;
   gap: 16px;
   max-width: 360px;
+`;
+
+export const DetailTitle = styled.h1`
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 320px;
+  margin: 1rem 0 0.5rem;
+  color: #222;
+  text-align: center;
+`;
+
+export const DetailAuthor = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  margin: 0 0 0.5rem;
+  text-align: center;
+`;
+
+export const DetailGenre = styled.p`
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #888;
+  margin: 0 0 0.25rem;
+  text-align: center;
+  font-style: italic;
+`;
+
+export const DetailYear = styled.p`
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0 0 1rem;
+  text-align: center;
+`;
+
+export const PageContainer = styled.div`
+  height: 100vh;
+  width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 100px;
+  overflow-y: auto;
+`;
+
+export const StyledCircle = styled.div`
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: ${(props) => props.$backgroundColor};
+  margin-top: 24px;
+  height: 32px;
+  width: 32px;
+`;
+
+export const PaletteWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
 `;

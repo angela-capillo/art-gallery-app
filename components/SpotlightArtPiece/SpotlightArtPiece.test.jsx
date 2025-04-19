@@ -1,8 +1,4 @@
-// what do we want to test here:
-
-// that we get a random artwork? :D
-
-import SpotlightArtPiece from "./SpotlightArtPiece";
+import SpotlightArtPiece from "../SpotlightArtPiece/SpotlightArtPiece";
 import { render, screen } from "@testing-library/react";
 
 const spotlightTestData = [

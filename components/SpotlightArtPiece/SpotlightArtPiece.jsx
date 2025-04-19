@@ -1,4 +1,4 @@
-import ArtPiece from "@/components/ArtPiece";
+import ArtPiece from "@/components/ArtPiece/ArtPiece";
 import { useState, useEffect } from "react";
 
 export default function SpotlightArtPiece({
