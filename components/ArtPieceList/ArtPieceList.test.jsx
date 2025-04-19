@@ -1,8 +1,4 @@
-// what do we want to test here:
-
-// the list is rendered correctly when displaying all pieces and only favs
-
-import ArtPiecesList from "./ArtPieceList";
+import ArtPiecesList from "../ArtPieceList/ArtPieceList";
 import { render, screen } from "@testing-library/react";
 
 const artPiecesListTestData = [
@@ -63,9 +59,17 @@ test("renders all art pieces when only favs is false", () => {
     />
   );
 
-  expect(screen.getByText(`"Orange Red and Green Abstract Painting" by Steve Johnson`)).toBeInTheDocument();
-  expect(screen.getByText(`"Blue and Red" by Jung-Hua Lui`)).toBeInTheDocument();
-  expect(screen.getByText(`"Clay Bust Sculptures" by dilara irem`)).toBeInTheDocument();
+  expect(
+    screen.getByText(
+      `"Orange Red and Green Abstract Painting" by Steve Johnson`
+    )
+  ).toBeInTheDocument();
+  expect(
+    screen.getByText(`"Blue and Red" by Jung-Hua Lui`)
+  ).toBeInTheDocument();
+  expect(
+    screen.getByText(`"Clay Bust Sculptures" by dilara irem`)
+  ).toBeInTheDocument();
 });
 
 test("renders only favorite art pieces when only favs is true", () => {
@@ -78,7 +82,15 @@ test("renders only favorite art pieces when only favs is true", () => {
     />
   );
 
-  expect(screen.getByText(`"Blue and Red" by Jung-Hua Lui`)).toBeInTheDocument();
-  expect(screen.getByText(`"Clay Bust Sculptures" by dilara irem`)).toBeInTheDocument();
-  expect(screen.queryByText(`"Orange Red and Green Abstract Painting" by Steve Johnson`)).not.toBeInTheDocument();
+  expect(
+    screen.getByText(`"Blue and Red" by Jung-Hua Lui`)
+  ).toBeInTheDocument();
+  expect(
+    screen.getByText(`"Clay Bust Sculptures" by dilara irem`)
+  ).toBeInTheDocument();
+  expect(
+    screen.queryByText(
+      `"Orange Red and Green Abstract Painting" by Steve Johnson`
+    )
+  ).not.toBeInTheDocument();
 });

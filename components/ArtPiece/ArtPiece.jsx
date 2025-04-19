@@ -3,8 +3,8 @@ import {
   ArtPieceLabel,
   ArtPieceLink,
   ArtPieceWrapper,
-} from "./StyledComponents";
-import FavButton from "./FavButton";
+} from "../StyledComponents/StyledComponents";
+import FavButton from "../FavButton/FavButton";
 
 export default function ArtPiece({
   slug,

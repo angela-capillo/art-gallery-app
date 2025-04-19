@@ -1,26 +1,17 @@
-import PageWrapper from "@/components/PageWrapper";
-import { NavigationLink } from "@/components/StyledComponents";
-import ArtPieceDetail from "@/components/ArtPieceDetail";
+import PageWrapper from "@/components/PageWrapper/PageWrapper";
+import { NavigationLink } from "@/components/StyledComponents/StyledComponents";
+import ArtPieceDetail from "@/components/ArtPieceDetail/ArtPieceDetail";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import FavButton from "@/components/FavButton";
 
 export default function DetailsPage({
   artPieces,
   favorites,
   onToggleFavorite,
 }) {
-
   const router = useRouter();
   const { slug } = router.query;
-
-console.log("slug from router", slug);
-console.log("arr", artPieces);
-
   const currentArtPiece = artPieces.find((artPiece) => artPiece.slug === slug);
-
-  //console.log("curr", slug);
-  //console.log("colors", currentArtPiece.colors);
 
   if (!currentArtPiece) {
     return null;
