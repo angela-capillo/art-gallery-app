@@ -11,7 +11,7 @@ export default function ArtPieceDetail({ name, artist, image, year, genre, slug,
           src={image}
           height={200}
           width={300}
-          alt={name + " by " + image}
+          alt={`${name} by ${artist}`}
         />
         <FavButton
           slug={slug}

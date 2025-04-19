@@ -26,7 +26,7 @@ export default function ArtPiece({
           src={image}
           height={200}
           width={300}
-          alt={name + " by " + image}
+          alt={`${name} by ${artist}`}
         />
         <ArtPieceLabel>{`"${name}" by ${artist}`}</ArtPieceLabel>
       </ArtPieceLink>
